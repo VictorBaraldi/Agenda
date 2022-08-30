@@ -1,0 +1,4 @@
+<% Controle de fluxo (if, for..) %>
+<%= imprime escapando caracteres %> mostra
+<%- Imprime sem escapar %> executa direto
+<%- include('caminho/arquivo')%> caminhos
