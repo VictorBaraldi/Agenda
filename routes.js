@@ -8,18 +8,18 @@ const {loginRequired} = require('./src/middleware/middleware')
 
 
 //rotas da home           
-route.get('/', homeController.index);
+route.get('https://victorbaraldi.tech/', homeController.index);
 
 //rotas de login
-route.get('/login', loginController.index);
-route.post('/login/register', loginController.register);
-route.post('/login/login', loginController.login);
-route.get('/logout', loginController.logout);
+route.get('https://victorbaraldi.tech/login', loginController.index);
+route.post('https://victorbaraldi.tech/login/register', loginController.register);
+route.post('https://victorbaraldi.tech/login/login', loginController.login);
+route.get('https://victorbaraldi.tech/logout', loginController.logout);
 
 //rotas de contato
-route.get('/contato', loginRequired, contatoController.index);
-route.post('/contato/register', loginRequired, contatoController.register);
-route.get('/contato/:id', loginRequired, contatoController.editI);
-route.post('/contato/edit/:id', loginRequired, contatoController.edit);
-route.get('/contato/delete/:id', loginRequired, contatoController.delete)
+route.get('https://victorbaraldi.tech/contato', loginRequired, contatoController.index);
+route.post('https://victorbaraldi.tech/contato/register', loginRequired, contatoController.register);
+route.get('https://victorbaraldi.tech/contato/:id', loginRequired, contatoController.editI);
+route.post('https://victorbaraldi.tech/contato/edit/:id', loginRequired, contatoController.edit);
+route.get('https://victorbaraldi.tech/contato/delete/:id', loginRequired, contatoController.delete)
 module.exports = route;
