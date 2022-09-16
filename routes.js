@@ -8,18 +8,18 @@ const {loginRequired} = require('./src/middleware/middleware')
 
 
 //rotas da home           
-route.get('/', homeController.index);
+route.get('/agenda/', homeController.index);
 
 //rotas de login
-route.get('/login', loginController.index);
-route.post('/login/register', loginController.register);
-route.post('/login/login', loginController.login);
-route.get('/logout', loginController.logout);
+route.get('/agenda/login', loginController.index);
+route.post('/agenda/login/register', loginController.register);
+route.post('/agenda/login/login', loginController.login);
+route.get('/agenda/logout', loginController.logout);
 
 //rotas de contato
-route.get('/contato', loginRequired, contatoController.index);
-route.post('/contato/register', loginRequired, contatoController.register);
-route.get('/contato/:id', loginRequired, contatoController.editI);
-route.post('/contato/edit/:id', loginRequired, contatoController.edit);
-route.get('/contato/delete/:id', loginRequired, contatoController.delete)
+route.get('/agenda/contato', loginRequired, contatoController.index);
+route.post('/agenda/contato/register', loginRequired, contatoController.register);
+route.get('/agenda/contato/:id', loginRequired, contatoController.editI);
+route.post('/agenda/contato/edit/:id', loginRequired, contatoController.edit);
+route.get('/agenda/contato/delete/:id', loginRequired, contatoController.delete)
 module.exports = route;
